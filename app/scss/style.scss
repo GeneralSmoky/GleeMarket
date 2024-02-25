@@ -53,7 +53,7 @@
       transform: translate(-50%, -50%);
       }
     }
-  &-number {
+  &-number-heart {
     position: absolute;
     width: 16px;
     height: 16px;
@@ -73,7 +73,7 @@
     padding: 22px 40px 15px 30px;
     position: relative;
   }
-  &-number2 {
+  &-number-cart {
     position: absolute;
     width: 16px;
     height: 16px;
@@ -85,6 +85,206 @@
     top: 14px;
     right: 30px;
     line-height: 15px;
+  }
+}
+
+.top-slider {
+    background-color: #fcd7b6;
+    padding: 100px 0 55px;
+  &__container {
+    max-width: 1500px;
+  }
+  &__item{
+    display: flex;
+  }
+  &__content {
+    margin-right: 100px;
+    padding-left: 150px
+  }
+  &__wrapper {
+    display: flex;
+    padding-top: 122px;
+  }
+  &__title {
+    @extend %Rubik-Medium-500;
+    font-size: 72px;
+    line-height: 70px;
+    width: 415px;
+    margin-bottom: 45px;
+    color: #243f4d;
+  }
+  &__text {
+    color: #436372;
+    font-size: 18px;
+    line-height: 30px;
+    width: 330px;
+    margin-bottom: 45px;
+    @extend %Rubik-Regular-400;
+  }
+  &__link {
+    color: #ffffff;
+    padding: 20px 100px 20px 25px;
+    background-color: #a3bbc8;
+    font-size: 15px;
+    position: relative;
+    @extend %Rubik-Medium-500;
+  &::after {
+    content:'';
+    background-image: url('../images/icons/arrow.png');
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    right: 8px;
+    transform: translate(-50%, -50%);
+    width: 23px;
+    height: 9px;
+    background-repeat: no-repeat;
+    }
+  }
+  &__img {
+      margin-top: -120px
+    }
+   .slick-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0 10px;
+  li{
+    line-height: 0;
+    counter-increment: my-counter;
+    counter-reset: 0;
+    button{
+      padding: 0;
+      font-size: 0;
+      width: 30px;
+      height: 30px;
+      border: none;
+      border-radius: 50%;
+      opacity: 0.5;
+      position: relative;
+      color: #a3bbc8;
+      @extend %Rubik-Medium-500;
+      &::before {
+        content:'0' counter(my-counter);
+        position: absolute;
+        font-size: 11px;
+        @extend %Rubik-Medium-500;
+        bottom: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+     &.slick-active {
+      button {
+        opacity: 1;
+        color: black;
+      }
+     }
+  }
+  
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-top {
+  padding: 80px 0;
+  display: flex;
+  @extend %Rubik-Regular-400;
+  font-size: 14px;
+  border-bottom: 1px solid #dae4e9;
+
+  &__contact {
+    width: 200px;
+    margin-right: 100px;
+  }
+  &__logo {
+    margin-bottom: 30px;
+    display: block;
+  }
+  &__adress,
+  &__tel,
+  &__email{
+    margin-bottom: 20px;
+    display: block;
+    color: $footer;
+  }
+  &__nav {
+    width: 125px;
+    margin-right: 175px;
+  }
+  &__title {
+    margin-bottom: 25px;
+    margin-top: 13px;
+    @extend %DMSans-Bold-700;
+    font-size: 16px;
+  }
+  &__link {
+    margin-bottom: 15px;
+    display: block;
+    color: $footer;
+  }
+  &__item-form {
+    max-width: 270px;  
+  }
+  &__item-text {
+    margin-bottom: 40px;
+    color: $footer;
+  }
+  &__form-input {
+    max-width: 170px;
+    padding: 15px;
+    border: none;
+    background-color: #fef7f0;
+    font-size: 12px;
+    &::placeholder {
+      color: #234969;
+    }
+  }
+  &__form-btn {
+    padding: 13px;
+    border: none;
+    background-color: #a3bbc8;
+    color: #fff;
+    cursor: pointer;
+    margin-left: -3px
+  }
+}
+
+.footer-bottom {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  color: $footer;
+  @extend %Rubik-Regular-400;
+  font-size: 14px;
+  &__nav {
+    gap: 0 10px;
+    display: flex;
+  }
+  &__link {
+  color: $footer;
+  @extend %Rubik-Regular-400;
+  font-size: 14px;
+  }
+  &__link + .footer-bottom__link {
+    padding-left: 10px;
+    border-left: 1px solid $footer;
+    color: $footer;
   }
 }
 
